@@ -1,0 +1,20 @@
+{
+  "name": "@evanhendersonrichtbyte/dynamic-module-importer",
+  "version": "1.0.0",
+  "description": "Allows you to import multiple modules into your node script",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EvanHendersonRichtByte/dynamic-module-importer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EvanHendersonRichtByte/dynamic-module-importer/issues"
+  },
+  "homepage": "https://github.com/EvanHendersonRichtByte/dynamic-module-importer#readme"
+}
