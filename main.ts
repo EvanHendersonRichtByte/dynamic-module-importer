@@ -2,15 +2,25 @@
 const c = console.log;
 
 const fs = require("fs");
-const files = fs.readdirSync("./modules/");
 const path = require("path");
-let filename: any;
+let files = fs.readdirSync("./modules/");
+let filename: string;
+let includedFn = [];
 
-files.forEach((item) => {
-  filename = item.replace(/\.[^/.]+$/, "");
-  if (item.endsWith(".js")) {
-    global[filename] = require(path.join(__dirname, "modules", item));
-  }
-});
+const include = (files: string[], includedFn: string[]) => {
+  files.forEach((item, index) => {
+    filename = item.replace(/\.[^/.]+$/, "");
+    if (item.endsWith(".js")) {
+      includedFn[index] = filename;
+      global[filename] = require(path.join(__dirname, "modules", item));
+    }
+  });
+};
 
-// const list = () => {}
+const functionList = () => includedFn;
+const fileList = () => files;
+
+module.exports = { include, functionList, fileList };
+
+include(files, includedFn);
+c(includedFn);

@@ -4,7 +4,13 @@
   "description": "Allows you to import multiple modules into your node script",
   "main": "main.js",
   "scripts": {
-    "test": "exit 0"
+    "test": "exit 0",
+    "run:js": "nodemon main.js",
+    "run:ts": "tsc -w main.ts",
+    "debugfile1": "cd ./modules/ && tsc test1.ts",
+    "debugfile2": "cd ./modules/ && tsc test2.ts",
+    "debugfile3": "cd ./modules/ && tsc test3.ts",
+    "start": "concurrently  --kill-others-on-fail \"npm:debugfile1\" \"npm:debugfile2\" \"npm:debugfile3\" \"npm:run:ts\" \"npm:run:js\""
   },
   "repository": {
     "type": "git",
@@ -19,5 +25,11 @@
   "homepage": "https://github.com/EvanHendersonRichtByte/dynamic-module-importer#readme",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@evanhendersonrichtbyte"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.15",
+    "concurrently": "^7.0.0",
+    "nodemon": "^2.0.15",
+    "typescript": "^4.5.5"
   }
 }
