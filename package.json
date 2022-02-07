@@ -16,5 +16,6 @@
   "bugs": {
     "url": "https://github.com/EvanHendersonRichtByte/dynamic-module-importer/issues"
   },
-  "homepage": "https://github.com/EvanHendersonRichtByte/dynamic-module-importer#readme"
+  "homepage": "https://github.com/EvanHendersonRichtByte/dynamic-module-importer#readme",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
 }
