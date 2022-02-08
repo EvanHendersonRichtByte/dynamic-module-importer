@@ -5,8 +5,11 @@
 
 ### Installation
 Install from the command line:
+
 `npm install @evanhendersonrichtbyte/dynamic-module-importer@1.1.0`
+
 Install via package.json:
+
 `"@evanhendersonrichtbyte/dynamic-module-importer": "1.1.0"`
 
 ### Tested with:
