@@ -29,6 +29,6 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-      - run: rm .npmrc && rm package.json && mv npm.package.json package.json && npm install --registry https://registry.npmjs.org && npm publish
+      - run: npm adduser --registry=dynamic-module-importer --scope=@evanhendersonrichtbyte && rm .npmrc && rm package.json && mv npm.package.json package.json && npm install --registry https://registry.npmjs.org && npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
