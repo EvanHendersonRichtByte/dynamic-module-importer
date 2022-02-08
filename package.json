@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "deploy": "npm publish",
-    "test": "exit 0",
+    "test": "mocha",
     "run:js": "nodemon main.js",
     "run:ts": "tsc -w main.ts",
     "debugfile1": "cd ./modules/ && tsc test1.ts",
